@@ -666,6 +666,15 @@ button {
 
   .newsletter-form {
     flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .pagination-section {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
   }
 
   .newsletter-form .form-control,
