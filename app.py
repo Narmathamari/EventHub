@@ -16,7 +16,7 @@ def index():
         flash("Registration submitted successfully!", "success")
         return redirect(url_for("index"))
 
-    return render_template("index.html")
+    return render_template("home.html")
 
 if __name__ == "__main__":
     app.run(debug=True)

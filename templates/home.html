@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EventHub | Discover Amazing Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body>
+    <header class="site-header shadow-sm">
+      <div class="container d-flex align-items-center justify-content-between py-3">
+        <a class="d-flex align-items-center brand text-decoration-none" href="#">
+          <span class="brand-icon d-flex align-items-center justify-content-center me-3">
+            <i class="bi bi-calendar-event-fill"></i>
+          </span>
+          <span class="brand-name">EventHub</span>
+        </a>
+        <nav class="d-none d-xl-flex">
+          <ul class="nav align-items-center gap-4 mb-0">
+            <li><a class="nav-link active" href="#">Home</a></li>
+            <li><a class="nav-link" href="#events">Events</a></li>
+            <li><a class="nav-link" href="#about">About Us</a></li>
+            <li><a class="nav-link" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="d-flex align-items-center gap-3">
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <a class="btn btn-login" href="#">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero-section">
+        <div class="container d-grid align-items-center" style="grid-template-columns: 1.05fr 0.95fr; gap: 3rem;">
+          <div>
+            <span class="hero-label">
+              <i class="bi bi-lightning-charge-fill"></i>
+              Discover Events
+            </span>
+            <h1 class="hero-title">
+              Discover Amazing <span style="color: #3b59ff;">Events Around You</span>
+            </h1>
+            <p class="hero-copy">
+              Find and register for events that match your passion. Connect, learn and grow together.
+            </p>
+
+            <div class="hero-search d-flex flex-wrap align-items-center gap-3 mt-4">
+              <div class="search-input flex-fill position-relative">
+                <i class="bi bi-search search-icon"></i>
+                <input id="eventSearch" type="search" class="form-control" placeholder="Search events, categories or keywords..." />
+              </div>
+              <button class="btn btn-search px-4 py-3">Search</button>
+            </div>
+
+            <div class="category-list d-flex flex-wrap gap-2 mt-4">
+              <button class="category-pill active" data-category="all" type="button">All</button>
+              <button class="category-pill" data-category="technology" type="button">Technology</button>
+              <button class="category-pill" data-category="business" type="button">Business</button>
+              <button class="category-pill" data-category="workshop" type="button">Workshop</button>
+              <button class="category-pill" data-category="music" type="button">Music</button>
+              <button class="category-pill" data-category="sports" type="button">Sports</button>
+              <button class="category-pill" data-category="cultural" type="button">Cultural</button>
+            </div>
+          </div>
+
+          <div class="hero-visuals">
+            <img src="../static/images/hero-bg.png" alt="">
+          </div>
+
+          <!-- <div class="hero-visual">
+            <div class="hero-graphic"></div>
+            <div class="hero-card p-4 rounded-4 shadow-sm bg-white">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <span class="badge" style="background: rgba(59, 89, 255, 0.08); color: #3b59ff;">Featured</span>
+                <div class="text-muted small">July 2026</div>
+              </div>
+
+              <div class="hero-calendar p-3 rounded-4" style="background: #f8fafc; border: 1px solid #e2e8f0;">
+                <div class="calendar-day">25</div>
+                <div class="calendar-details">
+                  <h5 class="mb-1">Tech Fest 2026</h5>
+                  <p class="mb-0 text-muted">Join the biggest tech celebration in Chennai.</p>
+                </div>
+              </div>
+
+              <div class="mt-4">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                  <div>
+                    <p class="mb-1 text-muted small">Location</p>
+                    <p class="mb-0 fw-semibold">Chennai, Tamil Nadu</p>
+                  </div>
+                  <div>
+                    <p class="mb-1 text-muted small">Seats Left</p>
+                    <p class="mb-0 fw-semibold">20</p>
+                  </div>
+                </div>
+                <button class="btn btn-search px-4 py-3 w-100">Register Now</button>
+              </div>
+            </div>
+            <span class="hero-dot pattern-dot"></span>
+            <span class="hero-dot" style="top: 20%; right: 18%; width: 92px; height: 92px; background: rgba(102, 126, 255, 0.12);"></span>
+          </div> -->
+        </div>
+      </section>
+
+      <section id="events" class="events-section py-5">
+        <div class="container">
+          <div class="d-flex flex-column flex-lg-row justify-content-between align-items-start align-items-lg-center mb-4 gap-3">
+            <div>
+              <div class="section-label">Upcoming Events</div>
+              <h2 class="section-title">Explore events near you</h2>
+            </div>
+            <a href="#" class="btn btn-outline-primary px-4 py-2">View All Events</a>
+          </div>
+
+          <div class="row g-4">
+            <div class="col-sm-6 col-xl-3">
+              <article class="event-card p-4 rounded-4" data-title="Tech Fest 2026" data-category="technology">
+                <div class="event-image event-image-alt"></div>
+                <div class="mt-4 d-flex justify-content-between align-items-center mb-3">
+                  <span class="event-tag">Tech</span>
+                  <span class="event-status">Seats Left: 20</span>
+                </div>
+                <h5>Tech Fest 2026</h5>
+                <div class="event-meta">
+                  <div><i class="bi bi-calendar-event me-2"></i>25 June 2026</div>
+                  <div><i class="bi bi-geo-alt me-2"></i>Chennai, Tamil Nadu</div>
+                </div>
+                <button class="btn btn-search mt-4 w-100">Register Now</button>
+              </article>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <article class="event-card p-4 rounded-4" data-title="AI & ML Workshop" data-category="workshop">
+                <div class="event-image event-image-tech"></div>
+                <div class="mt-4 d-flex justify-content-between align-items-center mb-3">
+                  <span class="event-tag">Workshop</span>
+                  <span class="event-status">Seats Left: 35</span>
+                </div>
+                <h5>AI & ML Workshop</h5>
+                <div class="event-meta">
+                  <div><i class="bi bi-calendar-event me-2"></i>10 July 2026</div>
+                  <div><i class="bi bi-geo-alt me-2"></i>Bangalore, Karnataka</div>
+                </div>
+                <button class="btn btn-search mt-4 w-100">Register Now</button>
+              </article>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <article class="event-card p-4 rounded-4" data-title="Future of Web Dev" data-category="business">
+                <div class="event-image event-image-web"></div>
+                <div class="mt-4 d-flex justify-content-between align-items-center mb-3">
+                  <span class="event-tag">Seminar</span>
+                  <span class="event-status">Seats Left: 50</span>
+                </div>
+                <h5>Future of Web Dev</h5>
+                <div class="event-meta">
+                  <div><i class="bi bi-calendar-event me-2"></i>18 July 2026</div>
+                  <div><i class="bi bi-geo-alt me-2"></i>Online</div>
+                </div>
+                <button class="btn btn-search mt-4 w-100">Register Now</button>
+              </article>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <article class="event-card p-4 rounded-4" data-title="Music Night 2026" data-category="cultural">
+                <div class="event-image event-image-music"></div>
+                <div class="mt-4 d-flex justify-content-between align-items-center mb-3">
+                  <span class="event-tag">Cultural</span>
+                  <span class="event-status">Seats Left: 15</span>
+                </div>
+                <h5>Music Night 2026</h5>
+                <div class="event-meta">
+                  <div><i class="bi bi-calendar-event me-2"></i>30 July 2026</div>
+                  <div><i class="bi bi-geo-alt me-2"></i>Coimbatore, Tamil Nadu</div>
+                </div>
+                <button class="btn btn-search mt-4 w-100">Register Now</button>
+              </article>
+            </div>
+          </div>
+
+          <div class="row g-4 mt-4">
+            <div class="col-sm-6 col-xl-3">
+              <div class="stat-card p-4 rounded-4">
+                <h3>120+</h3>
+                <p>Amazing events happening around you.</p>
+                <small>Events</small>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="stat-card p-4 rounded-4">
+                <h3>5K+</h3>
+                <p>People already joined and enjoyed.</p>
+                <small>Participants</small>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="stat-card p-4 rounded-4">
+                <h3>30+</h3>
+                <p>Wide range of categories to explore.</p>
+                <small>Categories</small>
+              </div>
+            </div>
+            <div class="col-sm-6 col-xl-3">
+              <div class="stat-card p-4 rounded-4">
+                <h3>50+</h3>
+                <p>Trusted organizers and partners.</p>
+                <small>Organizers</small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="newsletter-section py-5">
+        <div class="container">
+          <div class="newsletter-card rounded-4 p-5 shadow-sm">
+            <div class="row align-items-center gy-4">
+              <div class="col-lg-7">
+                <span class="section-label">Never Miss an Update!</span>
+                <h3 class="mt-3">Subscribe to our newsletter and get the latest events and updates delivered to your inbox.</h3>
+              </div>
+              <div class="col-lg-5">
+                <form class="newsletter-form d-flex gap-2 align-items-center flex-wrap" action="#" method="GET">
+                  <input type="email" class="form-control" placeholder="Enter your email address" aria-label="Email address" required />
+                  <button class="btn btn-primary px-4 py-3" type="submit">Subscribe</button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer-section py-5">
+        <div class="container">
+          <div class="row gy-4">
+            <div class="col-md-3">
+              <h5 class="footer-brand">EventHub</h5>
+              <p class="footer-text">Your gateway to amazing events. Discover, register, and be a part of unforgettable experiences.</p>
+            </div>
+            <div class="col-md-3">
+              <h6 class="text-white mb-3">Quick Links</h6>
+              <ul class="list-unstyled footer-links mb-0">
+                <li><a href="#">Home</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h6 class="text-white mb-3">Support</h6>
+              <ul class="list-unstyled footer-links mb-0">
+                <li><a href="#">Help Center</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <h6 class="text-white mb-3">Categories</h6>
+              <ul class="list-unstyled footer-links mb-0">
+                <li><a href="#">Technology</a></li>
+                <li><a href="#">Business</a></li>
+                <li><a href="#">Workshop</a></li>
+                <li><a href="#">Music</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="border-top mt-4 pt-3 text-center">
+            <p class="mb-0 small footer-bottom">© 2026 EventHub. All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+  </body>
+</html>

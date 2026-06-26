@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>EventHub | Tech Fest 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}" /> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+  </head>
+  <body>
+    <header class="site-header shadow-sm">
+      <div class="container d-flex align-items-center justify-content-between py-3">
+        <a class="d-flex align-items-center brand text-decoration-none" href="#">
+          <span class="brand-icon d-flex align-items-center justify-content-center me-3">
+            <i class="bi bi-calendar-event-fill"></i>
+          </span>
+          <span class="brand-name">EventHub</span>
+        </a>
+        <nav class="d-none d-xl-flex">
+          <ul class="nav align-items-center gap-4 mb-0">
+            <li><a class="nav-link" href="#">Home</a></li>
+            <li><a class="nav-link" href="#">Events</a></li>
+            <li><a class="nav-link" href="#">About Us</a></li>
+            <li><a class="nav-link" href="#">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="d-flex align-items-center gap-3">
+          <button class="theme-toggle" type="button" aria-label="Toggle theme">
+            <i class="bi bi-moon-stars"></i>
+          </button>
+          <a class="btn btn-login" href="#">Login</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="event-page pb-5">
+      <div class="container pt-5">
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <a href="#" class="text-decoration-none text-muted back-link">
+            <i class="bi bi-chevron-left"></i>
+            Back to Events
+          </a>
+        </div>
+
+        <div class="row g-4">
+          <div class="col-xl-8">
+            <div class="rounded-4 overflow-hidden shadow-sm mb-4 event-image-large">
+              <div style="width:100%; min-height: 320px; background: url(../static/images/comp.jpg) center/cover; display:grid; place-items:center; color:#fff;">
+                <i class="bi bi-camera-reels" style="font-size: 5rem; opacity: 0.2;"></i>
+              </div>
+              <span class="event-tag position-absolute" style="top: 24px; left: 24px;">Tech</span>
+            </div>
+
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-start gap-3 mb-4">
+              <div>
+                <h1 class="mb-2">Tech Fest 2026</h1>
+                <div class="d-flex flex-wrap gap-3 text-muted" style="font-size: 0.95rem;">
+                  <div><i class="bi bi-calendar-event me-2"></i>25 June 2026</div>
+                  <div><i class="bi bi-clock me-2"></i>09:00 AM - 05:00 PM</div>
+                  <div><i class="bi bi-geo-alt me-2"></i>Chennai, Tamil Nadu</div>
+                </div>
+              </div>
+            </div>
+
+            <p class="event-description">
+              Join us for an exciting day filled with tech talks, workshops, competitions and networking with industry experts and like-minded people.
+            </p>
+
+            <div class="highlights-grid">
+              <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Keynote Sessions</span></div>
+              <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Exciting Prizes</span></div>
+              <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Workshops</span></div>
+              <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Networking</span></div>
+              <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Hackathon</span></div>
+              <div class="highlight-item"><i class="bi bi-check-circle-fill"></i><span>Industry Exhibition</span></div>
+            </div>
+
+            <div class="progress-card d-flex flex-column flex-md-row align-items-center justify-content-between gap-3 mt-5">
+              <div>
+                <p class="text-muted mb-1">Seats Left</p>
+                <h4 class="mb-2">20 <span class="text-muted" style="font-size: 0.95rem;">/ 100</span></h4>
+                <div class="progress-line">
+                  <div class="progress-fill" style="width: 20%;"></div>
+                </div>
+              </div>
+              <a href="#" class="btn btn-search btn-lg px-5">Register Now</a>
+            </div>
+          </div>
+
+          <div class="col-xl-4">
+            <div class="info-card shadow-sm">
+              <h5 class="mb-4">Event Information</h5>
+              <div class="info-item">
+                <div class="info-icon"><i class="bi bi-calendar-event"></i></div>
+                <div>
+                  <p class="mb-1 fw-semibold">Date</p>
+                  <p class="mb-0 text-muted">25 June 2026</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="bi bi-clock"></i></div>
+                <div>
+                  <p class="mb-1 fw-semibold">Time</p>
+                  <p class="mb-0 text-muted">09:00 AM - 05:00 PM</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="bi bi-geo-alt"></i></div>
+                <div>
+                  <p class="mb-1 fw-semibold">Location</p>
+                  <p class="mb-0 text-muted">Chennai, Tamil Nadu</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="bi bi-person-video3"></i></div>
+                <div>
+                  <p class="mb-1 fw-semibold">Organized By</p>
+                  <p class="mb-0 text-muted">EventHub Events</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="bi bi-ticket-perforated"></i></div>
+                <div>
+                  <p class="mb-1 fw-semibold">Ticket Price</p>
+                  <p class="mb-0 text-muted">Free</p>
+                </div>
+              </div>
+              <div class="info-item">
+                <div class="info-icon"><i class="bi bi-people-fill"></i></div>
+                <div>
+                  <p class="mb-1 fw-semibold">Who Can Attend</p>
+                  <p class="mb-0 text-muted">Students, Professionals, Enthusiasts</p>
+                </div>
+              </div>
+              <div class="info-item mb-0">
+                <div class="info-icon"><i class="bi bi-globe"></i></div>
+                <div>
+                  <p class="mb-1 fw-semibold">Website</p>
+                  <a class="text-decoration-none" href="https://www.eventhub.com">www.eventhub.com</a>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card shadow-sm mt-4">
+              <h5 class="mb-4">Share This Event</h5>
+              <div class="share-list">
+                <a class="share-link facebook" href="#"><i class="bi bi-facebook"></i></a>
+                <a class="share-link twitter" href="#"><i class="bi bi-twitter"></i></a>
+                <a class="share-link linkedin" href="#"><i class="bi bi-linkedin"></i></a>
+                <a class="share-link whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer-section py-5">
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-md-3">
+            <h5 class="footer-brand">EventHub</h5>
+            <p class="footer-text">Your gateway to amazing events.</p>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white mb-3">Quick Links</h6>
+            <ul class="list-unstyled footer-links mb-0">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Events</a></li>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white mb-3">Support</h6>
+            <ul class="list-unstyled footer-links mb-0">
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="col-md-3">
+            <h6 class="text-white mb-3">Connect With Us</h6>
+            <div class="social-icons d-flex gap-2">
+              <!-- <a href="#" class="social-icon"><i class="bi bi-facebook"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-twitter"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-instagram"></i></a>
+              <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a> -->
+              <a class="share-link facebook" href="#"><i class="bi bi-facebook"></i></a>
+                <a class="share-link twitter" href="#"><i class="bi bi-twitter"></i></a>
+                <a class="share-link linkedin" href="#"><i class="bi bi-linkedin"></i></a>
+                <a class="share-link whatsapp" href="#"><i class="bi bi-whatsapp"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="border-top mt-4 pt-3 text-center">
+          <p class="mb-0 small footer-bottom">© 2026 EventHub. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -15,6 +15,33 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  const searchInput = document.getElementById('eventSearch');
+  const categoryButtons = document.querySelectorAll('.category-pill');
+  const eventCards = document.querySelectorAll('.event-card');
+
+  const applyFilter = () => {
+    const query = searchInput?.value.trim().toLowerCase() || '';
+    const activeCategory = document.querySelector('.category-pill.active')?.dataset.category || 'all';
+
+    eventCards.forEach(card => {
+      const title = card.dataset.title.toLowerCase();
+      const category = card.dataset.category.toLowerCase();
+      const matchesSearch = !query || title.includes(query) || card.textContent.toLowerCase().includes(query);
+      const matchesCategory = activeCategory === 'all' || category === activeCategory;
+      card.style.display = matchesSearch && matchesCategory ? '' : 'none';
+    });
+  };
+
+  categoryButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      categoryButtons.forEach(item => item.classList.remove('active'));
+      button.classList.add('active');
+      applyFilter();
+    });
+  });
+
+  searchInput?.addEventListener('input', applyFilter);
 });
 
 function generateRegistrationId() {
